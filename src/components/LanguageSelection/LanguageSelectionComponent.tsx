@@ -10,6 +10,8 @@ import "./LanguageSelectionComponent.css";
 import moment from "moment-timezone";
 import { AppProps, Language } from "src/types/types";
 
+// This component renders a dropdown that allows a user to choose a language
+// and update the time based on the selected language's timezone.
 const LanguageSelectionComponent = ({ items }: AppProps) => {
 	const [selectedLanguage, setSelectedLanguage] = useState(items[0]);
 
@@ -21,11 +23,10 @@ const LanguageSelectionComponent = ({ items }: AppProps) => {
 		};
 		const timezone = languageToTimezone[selectedLanguage];
 
-		// Use moment-timezone to get the current time in the selected timezone
 		const currentTime = moment().tz(timezone);
 
-		// Construct the date/time string using moment to avoid using native
-		// JavaScript Date object, which uses local time
+		// Constructs the date/time string using moment to avoid using native
+		// JavaScript Date object, which uses local time.
 		const date = currentTime.format("YYYY-MM-DD");
 		const time = currentTime.format("HH:mm:ss");
 
