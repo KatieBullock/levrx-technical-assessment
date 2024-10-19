@@ -4,8 +4,8 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import "./AppComponent.css";
-import LanguageSelectionComponent from "../LanguageSelection/LanguageSelectionComponent";
-import { AppProps } from "../../types/types";
+import { AppProps } from "src/types/types";
+import LanguageSelectionComponent from "src/components/LanguageSelection/LanguageSelectionComponent";
 
 function App() {
 	const props: AppProps = {

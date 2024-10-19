@@ -8,7 +8,7 @@ import {
 import { useEffect, useState } from "react";
 import "./LanguageSelectionComponent.css";
 import moment from "moment-timezone";
-import { AppProps, Language } from "../../types/types";
+import { AppProps, Language } from "src/types/types";
 
 const LanguageSelectionComponent = ({ items }: AppProps) => {
 	const [selectedLanguage, setSelectedLanguage] = useState(items[0]);
